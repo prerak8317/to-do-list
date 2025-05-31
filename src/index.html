@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="m-0 p-0">
+    <!-- Full-screen container with gradient background -->
+    <div
+      class="w-screen h-screen bg-gradient-to-br from-[#153677] to-[#4e085f] flex items-center justify-center"
+    >
+      <!-- To-Do App container -->
+      <div
+        class="w-full max-w-[570px] bg-white mx-auto mb-5 pt-10 pb-[70px] px-7 rounded-lg shadow-lg"
+      >
+        <!-- Header with title and icon -->
+        <h2 class="text-[#002765] flex items-center mb-5 font-bold text-2xl">
+          To-Do List
+          <img src="images/icon.png" alt="To-Do List Icon" class="w-8 ml-2.5" />
+        </h2>
+        <!-- Input row with form -->
+        <form
+          class="flex items-center justify-between bg-gray-100 rounded-full pl-5 mb-6"
+          onsubmit="addTask(); return false;"
+        >
+          <input
+            type="text"
+            id="input-box"
+            placeholder="Add A New Task"
+            class="flex-1 outline-none bg-transparent p-2.5 text-gray-700 placeholder-gray-500"
+            aria-label="Enter a new task"
+          />
+          <button
+            type="submit"
+            class="outline-none py-4 px-12 bg-[#ff5945] text-white text-base font-medium cursor-pointer rounded-full hover:bg-[#e04a3a] transition-colors"
+          >
+            Add
+          </button>
+        </form>
+        <!-- Task list -->
+        <ul id="list-container" class="relative">
+          <!-- Tasks will be dynamically added here -->
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
